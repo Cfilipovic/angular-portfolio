@@ -1,3 +1,236 @@
 body {
-	margin: 0;
+  margin: 0;
+}
+
+body {
+  background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #75517d, #1b2947);
+  background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+  background-attachment: fixed;
+  overflow: hidden;
+}
+@keyframes rotate {
+  0% {
+    transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+  }
+  100% {
+    transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+  }
+}
+.stars {
+  transform: perspective(500px);
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 0;
+  perspective-origin: 50% 100%;
+  left: 50%;
+  animation: rotate 90s infinite linear;
+}
+.star {
+  width: 2px;
+  height: 2px;
+  background: #f7f7b6;
+  //border-radius:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0 -300px;
+  transform: translate3d(0, 0, -300px);
+  backface-visibility: hidden;
+}
+
+.page-container {
+  position: relative;
+  padding-bottom: 5%;
+}
+
+.link {
+  font-family: "Avenir Next", "Segoe ui", Ubuntu, sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 1em;
+}
+
+.link:hover {
+  text-decoration: none;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.1);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+  color: #00e5ff;
+}
+
+.link a {
+  color: #ffeddb;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.link a:hover {
+  color: #00e5ff;
+  text-decoration: none;
+}
+
+.big-title {
+  font-family: "Avenir Next", "Segoe ui", Ubuntu, sans-serif;
+  color: #00e5ff;
+  text-transform: uppercase;
+  margin-top: 10px;
+  letter-spacing: 0.2em;
+  font-size: 45px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.small-title {
+  font-family: "Avenir Next", "Segoe ui", Ubuntu, sans-serif;
+  color: #fff59d;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.small-title span {
+  margin-right: 10px;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
+.contact {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact-box {
+  font-family: "Dosis", sans-serif;
+  display: inline-block;
+  border: 2px solid transparent;
+  text-align: center;
+  padding: 2rem;
+  width: 20rem;
+  height: 12rem;
+  border-radius: 2%;
+}
+
+.contact-box:hover {
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.2);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.2);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.2);
+  transition: all 200ms ease-in;
+  color: #ffffff;
+}
+
+.contact-box__title {
+  font-size: 2rem;
+}
+
+.contact-box:hover .contact-box__title {
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.2);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.2);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.2);
+  transition: all 200ms ease-in;
+  font-size: 2.5rem;
+}
+
+.contact-box__info {
+  padding: 0px;
+  margin: 0px;
+}
+
+.contact-box__info a {
+  color: #ffffff;
+}
+
+.contact-box__info a:hover {
+  text-decoration: none;
+}
+
+.contact-box__icon {
+  font-size: 2.5rem;
+}
+
+.contact-box--teal {
+  color: #ffffff;
+  background-color: #75bdbc;
+  border-color: #75bdbc;
+}
+.contact-box--teal .contact-box__title {
+  color: inherit;
+}
+.contact-box--teal:before {
+  background-color: #75bdbc;
+  border: 1px solid #75bdbc;
+}
+.contact-box--teal:hover {
+  color: white;
+}
+.contact-box--teal:hover a {
+  color: white;
+}
+
+.contact-box--orange {
+  color: #ffffff;
+  background-color: #f49263;
+  border-color: #f49263;
+}
+.contact-box--orange .contact-box__title {
+  color: inherit;
+}
+.contact-box--orange:before {
+  background-color: #f49263;
+  border: 1px solid #f49263;
+}
+.contact-box--orange:hover {
+  color: white;
+}
+.contact-box--orange:hover a {
+  color: white;
+}
+
+.contact-box--green {
+  color: #ffffff;
+  background-color: #8ccc80;
+  border-color: #8ccc80;
+}
+.contact-box--green .contact-box__title {
+  color: white;
+}
+.contact-box--green:before {
+  background-color: #8ccc80;
+  border: 1px solid #8ccc80;
+}
+.contact-box--green:hover {
+  color: white;
+}
+.contact-box--green:hover a {
+  color: white;
+}
+
+.ico-hours {
+  font-size: 3em;
+  color: #ffffff;
+}
+
+.ico-envelope {
+  font-size: 3em;
+  color: #ffffff;
+}
+
+.ico-phone {
+  font-size: 3em;
+  color: #ffffff;
 }
