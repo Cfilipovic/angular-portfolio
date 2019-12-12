@@ -1,0 +1,42 @@
+@import '../../../theme.scss';
+
+section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-rows: auto;
+	grid-gap: 10px;
+	margin: 0 auto;
+	max-width: 40%;
+}
+
+mat-card {
+	margin: 10px auto;
+	max-width: 700px;
+}
+
+img {
+	width: 50%;
+	height: 50%;
+}
+
+mat-card-content:focus {
+	outline: none;
+	border: 0;
+}
+
+.center-card {
+	text-align:center;
+}
+
+.create-design {
+	margin: 10px;
+	text-align: end;
+	top: auto !important;
+    right: 20px !important;
+    bottom: 10px !important;
+    left: auto !important;
+    position: fixed !important;
+}
+
+
+  

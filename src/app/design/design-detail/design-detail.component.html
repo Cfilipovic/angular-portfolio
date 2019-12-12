@@ -1,0 +1,34 @@
+<ng-container *ngIf="design">
+	<div [hidden]="!editing">
+		<mat-card>
+			<mat-form-field>
+				<input matInput placeholder="Design Title" [(ngModel)]="design.title">
+			</mat-form-field>
+			<mat-form-field>
+				<textarea matInput placeholder="Design Content" [(ngModel)]="design.description" rows="10"></textarea>
+			</mat-form-field>
+			<br>
+			<button matInput mat-raised-button color="accent" (click)="updateDesign()">Save</button>
+			<button matInput mat-raised-button (click)="editing=false">Cancel</button>
+		</mat-card>
+	</div>
+
+	<div [hidden]="editing">
+		<mat-card>
+			<img src="{{design.image}}" alt="{{design.title}}">
+			<p>designed by {{design.author}} &bull; {{design.submitted.toDate() | date: 'fullDate'}}</p>
+			<mat-card-content>
+				<h2>{{design.title}}</h2>
+				<p>{{design.description}}</p>
+			</mat-card-content>
+			<mat-card-actions align="end" *ngIf="auth.currentUserId === design.authorId">
+				<button mat-icon-button (click)="editing=true">
+					<mat-icon>edit</mat-icon>
+				</button>
+				<button mat-icon-button (click)="delete()">
+					<mat-icon>delete</mat-icon>
+				</button>
+			</mat-card-actions>
+		</mat-card>
+	</div>
+</ng-container>
