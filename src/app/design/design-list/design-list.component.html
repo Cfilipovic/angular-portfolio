@@ -1,5 +1,5 @@
 <section>
-	<mat-card *ngFor="let design of designs | async">
+	<mat-card *ngFor="let design of designs | async" class="card">
 		<mat-card-content routerLink="{{design.id}}">
 			<div class="center-card">
 				<img src="{{design.image}}" alt="{{design.title}}">

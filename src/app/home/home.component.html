@@ -14,24 +14,27 @@
 		</div>
 
 		<div class="container center-card">
-			<mat-card class="card social">
+			<mat-card class="card social" onclick="window.open('https://github.com/cfilipovic','mywindow');" style="cursor: pointer;">
 				<mat-card-content>
-					<mat-card-title>Github</mat-card-title>
-					<p>GitHub.com/Cfilipovic</p>
+					<img src="./assets/public_white_48dp.png" alt="Github Logo" />
+					<p class="title">Github</p>
+					<p class="subtitle">GitHub.com/Cfilipovic</p>
 				</mat-card-content>
 			</mat-card>
 
 			<mat-card class="card email">
-				<mat-card-content>					
-					<mat-card-title>Email</mat-card-title>
-					<p>Business@ConnorFilipovic.com</p>
+				<mat-card-content>		
+					<img src="./assets/email_white_48dp.png" alt="Email Logo"/>		
+					<p class="title">Email</p>
+					<p class="subtitle">Business@ConnorFilipovic.com</p>
 				</mat-card-content>				
 			</mat-card>
 
-			<mat-card class="card portfolio">
-				<mat-card-content>					
-					<mat-card-title>Portfolio</mat-card-title>
-					<p>Business@ConnorFilipovic.com</p>
+			<mat-card class="card portfolio" routerLink="/portfolio">
+				<mat-card-content>			
+					<img src="./assets/perm_contact_calendar_white_48dp.png" alt="Portfolio Logo"/>				
+					<p class="title">Portfolio</p>
+					<p class="subtitle">ConnorFilipovic.com/portfolio</p>
 				</mat-card-content>	
 			</mat-card>
 		</div>

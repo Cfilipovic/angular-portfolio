@@ -7,6 +7,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 //Font Awesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+//HTTP
+import { HttpClientModule } from '@angular/common/http';
+
 //Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -35,11 +38,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireStorageModule,
     AngularFireAuthModule,
     BrowserModule,
+    BrowserAnimationsModule,
     CoreModule,
     FontAwesomeModule,
+    HttpClientModule,
     NgbModule,
     SharedModule,
-    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

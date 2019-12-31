@@ -1,0 +1,42 @@
+<div class="container">
+	<div class="row">
+	  <div class="col-sm">
+			<mat-toolbar color="primary">
+				<mat-toolbar-row>
+					<span class="span">Portfolio Projects</span>
+				</mat-toolbar-row>
+			</mat-toolbar>
+
+			<mat-sidenav-container class="example-container">	
+				<section>	
+					<mat-card class="example-card mat-elevation-z8"  *ngFor="let project of mProjects">
+						<mat-card-header class="test">
+							<!-- <div mat-card-avatar [ngStyle]="{'background-image': 'url(../assets/news-images/'+ article.source.id +'.png)'}" class="example-header-image"></div> -->
+							<mat-card-title class="title">{{project.title}}</mat-card-title>
+							<mat-card-subtitle>
+								<div class="languages" *ngFor="let language of project.languages; last as isLast">
+									<span *ngIf="!isLast">{{language}} -&nbsp;</span>
+									<span *ngIf="isLast">{{language}}</span>
+								</div>
+							</mat-card-subtitle>
+						</mat-card-header>
+
+						<div class="center-card">
+							<img mat-card-image class="img-article" src={{project.image}} alt="">
+							<mat-card-content>
+								<p>
+									Test
+								{{project.description}}
+								</p>
+							</mat-card-content>
+						</div>
+
+						<mat-card-actions class="action-buttons">
+							<a mat-button color="primary" routerLink={{project.url}}><mat-icon>visibility</mat-icon> More</a>
+						</mat-card-actions>
+					</mat-card>
+				</section>	
+			</mat-sidenav-container>
+	  </div>
+	</div>
+</div>
