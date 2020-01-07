@@ -1,3 +1,5 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~src/variables.scss";
 .spacer {
 	flex: 1 1 auto;
 	overflow: hidden;
@@ -10,4 +12,12 @@ span:focus {
 
 span {
 	cursor: pointer;
+}
+
+.inactive {
+	color: #ffffff;
+}
+
+.active {
+	opacity: 0.7;
 }

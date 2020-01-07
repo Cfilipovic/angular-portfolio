@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
 	<mat-toolbar-row>
 		<span class="spacer"></span>
-		<span routerLink="/">Home</span>
+		<span routerLink="/" [routerLinkActive]="['inactive', 'active']" [routerLinkActiveOptions]="{exact: true}">Home</span>
 		<span class="spacer"></span>
-		<span routerLink="/portfolio">Portfolio</span>
+		<span routerLink="/portfolio" [routerLinkActive]="['inactive', 'active']">Portfolio</span>
 		<span class="spacer"></span>
 		<!-- <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
 			<button mat-raised-button color="accent" routerLink="/blog/dashboard">Write a Post</button>
