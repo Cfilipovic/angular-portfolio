@@ -7,9 +7,9 @@
 		</div>
 	</div>
 	<div class="row justify-content-center card-group equal">
-		<div class="col-6 d-flex align-items-stretch"  *ngFor="let project of mProjects">
+		<div class="col-6 d-flex align-items-stretch card-list"  *ngFor="let project of mProjects">
 			<mat-card class="card mat-elevation-z8 card-toolbar ">
-				<mat-toolbar class="card-toolbar-header" color="primary">
+				<mat-toolbar class="card-toolbar-header">
 					<span class="title-center">{{project.title}}</span>  
 				</mat-toolbar>
 				<mat-card-content class="card-content center-content" routerLink="{{project.url}}">

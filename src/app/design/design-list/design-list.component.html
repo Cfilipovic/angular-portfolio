@@ -1,21 +1,30 @@
-<section>
-	<mat-card *ngFor="let design of designs | async" class="card">
-		<mat-card-content routerLink="{{design.id}}">
-			<div class="center-card">
-				<img src="{{design.image}}" alt="{{design.title}}">
-				<h2>{{design.title}}</h2>
-				<p><small>Posted by {{design.author}} &bull; on {{design.submitted.toDate() | date: 'fullDate'}}</small></p>
-			</div>
-		</mat-card-content>
-		<mat-card-actions align="end" *ngIf="auth.currentUserId === design.authorId">
-			<button mat-icon-button (click)="delete(design.id)">
-				<mat-icon>delete</mat-icon>
-			</button>
-		</mat-card-actions>
-	</mat-card>
-</section>
-
-<div class="create-design" *ngIf="auth.afAuth.authState | async as user;">
-	<span class="spacer"></span>
-	<button mat-raised-button color="accent" routerLink="/design/dashboard">Publish a Design</button>
+<div class="container-fluid container">
+	<div class="row justify-content-md-center">
+		<div class="col-sm">
+			<mat-toolbar color="primary">
+				<span class="title-center">Daily UI Designs</span>  
+			</mat-toolbar>
+		</div>
+	</div>
+	<div class="row justify-content-center card-group equal">
+		<div class="col-6 d-flex align-items-stretch card-list"  *ngFor="let design of designs | async">
+			<mat-card class="card mat-elevation-z8 card-toolbar">
+				<mat-card-content class="card-content center-content" routerLink="{{design.id}}">
+					<div class="center-card">
+						<img src="{{design.image}}" alt="{{design.title}}">
+						<h2>{{design.title}}</h2>
+						<p><small>Posted by {{design.author}} &bull; on {{design.submitted.toDate() | date: 'fullDate'}}</small></p>
+					</div>
+				</mat-card-content>
+				<mat-card-actions class="actionsmain" align="center" *ngIf="auth.currentUserId === design.authorId">
+					<button class="actions" mat-icon-button routerLink="{{design.id}}">
+						<mat-icon>remove_red_eye</mat-icon>
+					</button>
+					<button class="actions" mat-icon-button (click)="delete(design.id)">
+						<mat-icon>delete</mat-icon>
+					</button>
+				</mat-card-actions>
+			</mat-card>
+		</div>
+	</div>	
 </div>

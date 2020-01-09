@@ -20,4 +20,17 @@ mat-card-content:focus {
 	outline: none;
 	border: 0;
 }
+
+.spacer {
+	flex: 1 1 auto;
+}
+
+.postbutton {
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
+	margin: 20px;
+	align-items: flex-end;
+}
+
   

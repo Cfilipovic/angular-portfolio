@@ -1,24 +1,31 @@
-@import '../../../theme.scss';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~src/variables.scss";
 
-section {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-template-rows: auto;
-	grid-gap: 10px;
-	margin: 0 auto;
-	max-width: 40%;
+body {
+    padding: 2em 23em;
+    background:lightgray;
 }
 
 mat-card {
-	margin: 10px auto;
-	max-width: 700px;
+	max-width: 30vw;
+	margin: 20px;
 }
 
-img {
-	width: 50%;
-	height: 50%;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin-bottom: 10px;
+.card {
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.card-toolbar {
+	padding: 0;
+}
+
+.card-content {
+	margin: 10px;
+	padding: 15px;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 mat-card-content:focus {
@@ -26,29 +33,42 @@ mat-card-content:focus {
 	border: 0;
 }
 
-.center-card {
-	text-align:center;
+.container {
+	padding: 0;
+	border: 1px solid rgba(111, 111, 111, 0.50);
+	margin: 10px auto;
+	width: 75%;
 }
 
-.create-design {
-	margin: 10px;
-	text-align: end;
-	top: auto !important;
-    right: 20px !important;
-    bottom: 10px !important;
-    left: auto !important;
-    position: fixed !important;
+img {
+	width: 50%;
+	height: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card {
-	// box-shadow: 10px 10px 5px;
-	// background-color: #007BFF;
-	// color: #FFFFFF;
-	// opacity: 0.5;
-	border-style: solid;
-	border-width: 1px;
-	// box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.title-center {
+	margin: 0 auto;
 }
 
+.center-content {
+	text-align: center;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
 
-  
+.languages {
+	display: inline-block;
+	font-size: 1.2em;
+	margin: 10px 0;
+}
+
+.actionsmain {
+	position: relative;
+	bottom: 5px;
+	margin: 10px auto;
+}
+
+.actions {
+	margin-bottom: 20px;
+}

@@ -6,12 +6,14 @@ import { DesignModule } from './design/design.module';
 import { HomeModule } from './home/home.module';
 import { NewsModule } from './news/news.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
+import { BattleconnectModule } from './battleconnect/battleconnect.module';
 
 const routes: Routes = []
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),  
+    RouterModule.forRoot(routes),
+    BattleconnectModule,  
     BugsModule,
     DesignModule,
     HomeModule,

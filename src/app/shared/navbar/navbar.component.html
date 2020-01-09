@@ -5,12 +5,12 @@
 		<span class="spacer"></span>
 		<span routerLink="/portfolio" [routerLinkActive]="['inactive', 'active']">Portfolio</span>
 		<span class="spacer"></span>
-		<!-- <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
-			<button mat-raised-button color="accent" routerLink="/blog/dashboard">Write a Post</button>
+		<div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+			<!-- <button mat-raised-button color="accent" routerLink="/blog/dashboard">Write a Post</button> -->
 			<button mat-button (click)="auth.logout()">Logout</button>
 		</div>
 		<ng-template #showLogin>
 			<button mat-button (click)="auth.login()">Login with Google</button>
-		</ng-template> -->
+		</ng-template>
 	</mat-toolbar-row>
 </mat-toolbar>
